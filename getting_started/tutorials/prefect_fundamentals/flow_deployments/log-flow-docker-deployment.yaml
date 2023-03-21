@@ -1,0 +1,67 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-flow'
+###
+name: log-flow-docker
+description: null
+version: 0394e1a595618c44960603fbba32ee2f
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  name: FordPrefect
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-flow
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env:
+    EXTRA_PIP_PACKAGES: s3fs
+  labels: {}
+  name: null
+  command: null
+  image: prefecthq/prefect:2.8.5-python3.8
+  image_pull_policy: null
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: false
+  volumes: []
+  stream_output: true
+  memswap_limit: null
+  mem_limit: null
+  privileged: false
+  _block_document_id: deebc218-9858-4448-80b4-e2275774919c
+  _block_document_name: log-tutorial
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage:
+  bucket_path: prefect-test-nagae/flows/log-test
+  aws_access_key_id: null
+  aws_secret_access_key: null
+  _block_document_id: fbe853d5-988f-4f15-8961-df5e438a2066
+  _block_document_name: log-test
+  _is_anonymous: false
+  block_type_slug: s3
+  _block_type_slug: s3
+path: ''
+entrypoint: log_flow.py:log_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    name:
+      title: name
+      position: 0
+      type: string
+  required:
+  - name
+  definitions: null
+timestamp: '2023-03-17T01:20:06.074090+00:00'

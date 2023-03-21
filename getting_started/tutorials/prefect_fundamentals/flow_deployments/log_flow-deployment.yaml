@@ -1,0 +1,50 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-flow'
+###
+name: log-simple
+description: null
+version: 0394e1a595618c44960603fbba32ee2f
+# The work queue that will handle this deployment's runs
+work_queue_name: test
+work_pool_name: default-agent-pool
+tags:
+- test_tag
+parameters:
+  name: Marvin
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 813ea8f0-d025-4c94-a7ba-b9d7c6b313fe
+  _block_document_name: anonymous-522d67cf-b84f-4d2d-a7da-7d2426ab743a
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /Users/satsuki/github/prefect-tutorial/getting_started/tutorials/prefect_fundamentals/flow_deployments
+entrypoint: log_flow.py:log_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    name:
+      title: name
+      position: 0
+      type: string
+  required:
+  - name
+  definitions: null
+timestamp: '2023-03-16T15:02:44.880254+00:00'
