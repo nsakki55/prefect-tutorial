@@ -3,4 +3,4 @@ RUN pip install prefect-aws
 RUN pip install s3fs
 RUN pip install pandas
 
-COPY etl.py /opt/prefect/flows/etl.py
+COPY ml_workflow_flow.py /opt/prefect/flows/ml_workflow_flow.py
